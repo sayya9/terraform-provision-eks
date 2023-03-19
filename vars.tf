@@ -12,3 +12,8 @@ variable "eks_public_subnets" {
   type    = map
   default = {}
 }
+
+variable "eks_private_subnets" {
+  type    = map
+  default = {}
+}
