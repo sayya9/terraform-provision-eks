@@ -24,6 +24,8 @@ resource "aws_subnet" "eks_public_subnets" {
 
   tags = {
     Name = "${var.eks_name}-${each.key}"
+    "kubernetes.io/cluster/${var.eks_name}"= "shared"
+    "kubernetes.io/role/elb" = 1
   }
 }
 
@@ -77,6 +79,8 @@ resource "aws_subnet" "eks_private_subnets" {
 
   tags = {
     Name = "${var.eks_name}-${each.key}"
+    "kubernetes.io/cluster/${var.eks_name}"= "shared"
+    "kubernetes.io/role/internal-elb" = 1
   }
 }
 
