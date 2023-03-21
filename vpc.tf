@@ -99,20 +99,6 @@ resource "aws_route_table" "private_rt" {
   }
 }
 
-# resource "aws_route_table_association" "private" {
-#   for_each = var.eks_private_subnets
-
-#   subnet_id      = aws_subnet.eks_private_subnets[each.key].id
-#   route_table_id = aws_route_table.private_rt.id
-# }
-
-# resource "aws_route_table_association" "private" {
-#   count = length(var.eks_private_subnets)
-
-#   subnet_id = aws_subnet.eks_private_subnets[count.index].id
-#   route_table_id = aws_route_table.private_rt[count.index].id
-# }
-
 resource "aws_route_table_association" "private" {
   count = length(var.eks_private_subnets)
 
