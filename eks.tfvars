@@ -1,3 +1,4 @@
+region = "us-west-2"
 eks_name = "devops-demo-eks"
 eks_vpc_cidr = "10.111.0.0/16"
 eks_public_subnets = {
