@@ -19,7 +19,7 @@ When you get ready, run the commands below:
 ```
 terraform init
 terraform plan
-terraform apply
+terraform apply -var-file eks.tfvars
 ```
 
 ## Connecting to the EKS
@@ -37,5 +37,5 @@ kubectl get svc
 ## Cleanup
 To destroy previously-created infrastructure with Terraform, run the command below:
 ```
-terraform destroy
+terraform destroy -var-file eks.tfvars
 ```
