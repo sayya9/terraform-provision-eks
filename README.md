@@ -2,15 +2,15 @@
 Terraform is an Infrastructure as Code tool that lets you define both cloud and on-premises resources in human-readable configuration files. This guide will help you use Terraform to deploy to EKS.
 
 This repository contains configuration to provision:
-+ 1 VPC
-+ 3 Public Subnets, 3 Private Subnets
++ 1 VPC `eks_vpc`
++ 3 Public Subnets`10.111.0.0/19` `10.111.32.0/19` `10.111.64.0/19`, 3 Private Subnets`10.111.96.0/19` `10.111.128.0/19` `10.111.160.0/19`
 + 4 Routing Tables
 + 1 Internet Gateway
 + 3 NAT Gateway in the different **public** subnets `High Availability`
 + 1 EKS cluster 
 
 The following architecture:
-![alt text](pictures/vpc_ha_nat.drawio.png)
+![alt text](pictures/terraform-provision-eks1.png)
 
 ## Provision Infrastructure
 Update the configurations based on your personal requirements.
