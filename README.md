@@ -18,7 +18,7 @@ Update the configurations based on your personal requirements.
 When you get ready, run the commands below:
 ```
 terraform init
-terraform plan
+terraform plan -var-file eks.tfvars
 terraform apply -var-file eks.tfvars
 ```
 
