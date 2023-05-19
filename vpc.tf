@@ -3,7 +3,7 @@ resource "aws_vpc" "eks_vpc" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "eks_vpc"
+    Name = "${var.eks_name}-vpc"
   }
 }
 
