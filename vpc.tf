@@ -52,8 +52,6 @@ resource "aws_route_table_association" "public" {
 resource "aws_eip" "nat_eip" {
   count = length(var.eks_private_subnets)
 
-  vpc = true
-
   tags = {
     Name = "${var.eks_name}-eip-${count.index+1}"
   }
